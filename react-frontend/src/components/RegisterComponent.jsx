@@ -4,7 +4,15 @@ export default class RegisterComponent extends Component {
     render() {
         return (
             <div>
-                <div class="modal modal-signin position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSignin">
+                <nav class="navbar bg-dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand text-white">Foodie Application</a>
+                        <form class="d-flex" role="sign-up">
+                        <a href='/login'><button class="btn btn-sm btn-outline-success" type="button" href="/login">SIGN IN</button></a>
+                        </form>
+                    </div>
+                </nav>
+                <div class="modal modal-signin position-static d-block py-5" tabindex="-1" role="dialog" id="modalSignin">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content rounded-4 shadow">
                             <div class="modal-header p-5 pb-4 border-bottom-0">
@@ -33,20 +41,16 @@ export default class RegisterComponent extends Component {
                                     <div class="form-floating mb-3">
                                         <input type="file" class="form-control form-control-sm" id="formFileSm" />
                                     </div>
-                                    <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
+                                    <button class="w-100 mb-2 btn btn-lg rounded-3 btn-dark" type="submit">Sign up</button>
                                     <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
                                     <hr class="my-4" />
                                     <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
-                                    <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="submit">
-
-                                        Sign up with Twitter
-                                    </button>
-                                    <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
-
-                                        Sign up with Facebook
+                                    <button class="w-100 py-2 mb-2 btn btn-outline-success rounded-3" type="submit">
+                                    <i class="fa-brands fa-google mr-2"></i>
+                                        Sign up with Google
                                     </button>
                                     <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
-
+                                    <i class="fa-brands fa-github mr-2"></i>
                                         Sign up with GitHub
                                     </button>
                                 </form>

@@ -21,18 +21,22 @@ public class Post {
     @Column(name = "at_Time")
     private Timestamp timestamp;
 
-    @Column(name = "likeCount")
-    private Number likeCount;
+    // @Column(name = "likeCount")
+    // private Number likeCount;
+
+	@Column(name = "postTitle")
+	private String postTitle;
 
     public Post() {
 
     }
-    public Post(long user_id, String path, Timestamp timestamp, Number likeCount){
+    public Post(long user_id, String path, Timestamp timestamp, String postTitle){
         super();
         this.user_id = user_id;
         this.path = path;
         this.timestamp = timestamp;
-        this.likeCount = likeCount;
+        // this.likeCount = likeCount;
+		this.postTitle = postTitle;
     }
     public long getPost_id() {
 		return post_id;
@@ -58,10 +62,16 @@ public class Post {
 	public void setTimestamp(Timestamp timestamp) {
 		this.timestamp = timestamp;
 	}
-	public Number getLikecount() {
-		return likeCount;
+	// public Number getLikecount() {
+	// 	return likeCount;
+	// }
+	// public void setLikeCount(Number likeCount) {
+	// 	this.likeCount = likeCount;
+	// }
+	public String getPostTitle() {
+		return postTitle;
 	}
-	public void setLikeCount(Number likeCount) {
-		this.likeCount = likeCount;
+	public void setPostTitle(String postTitle) {
+		this.postTitle = postTitle;
 	}
 }

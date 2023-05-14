@@ -51,7 +51,8 @@ public class PostController {
       post.setUser_id(postDetails.getUser_id());
       post.setPath(postDetails.getPath());
       post.setTimestamp(postDetails.getTimestamp());
-      post.setLikeCount(postDetails.getLikecount());
+      // post.setLikeCount(postDetails.getLikecount());
+      post.setPostTitle(postDetails.getPostTitle());
 
       Post updatedPost = postRepository.save(post);
       return ResponseEntity.ok(updatedPost);

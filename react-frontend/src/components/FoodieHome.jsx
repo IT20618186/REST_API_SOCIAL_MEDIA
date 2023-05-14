@@ -44,45 +44,9 @@ export default class FoodieHome extends Component {
             <div className="bg-dark col-auto col-md-4 col-lg-3 min-vh-100 d-flex flex-column justify-content-between">
               <div className="bg-dark p-2">
                 <a className="d-flex text-decoration-none mt-1 align-items-center text-white">
-                  <i class="fs-5 fa fa-quage"></i><span className="fs-4 d-none d-sm-inline">Foodie Application</span>
+                  <i class="fs-5 fa fa-quage"></i><span className="fs-4 d-none d-sm-inline" style={{ color: "#ffffff", }}>Suggest Friends for You</span>
                 </a>
-                <ul className="nav nav-pills flex-column mt-4">
-                  <li className="nav-item py-2 py-sm-0">
-                    <a href="#" className="nav-link text-white" aria-current="page">
-                      <i className="fa-5 fa-solid fa-house" style={{ color: "#ffffff", }}></i><span className="ml-2 fs-5 d-none d-sm-inline">Homey</span>
-                    </a>
-                  </li>
-                  <li className="nav-item py-2 py-sm-0">
-                    <a href="#" className="nav-link text-white" aria-current="page">
-                      <i className="fa-5 fa-solid fa-user" style={{ color: "#ffffff", }}></i><span className="ml-2 fs-5 d-none d-sm-inline">My Profile</span>
-                    </a>
-                  </li>
-                  <li className="nav-item py-2 py-sm-0">
-                    <a href="#" className="nav-link text-white" aria-current="page">
-                      <i className="fa-5 fa-solid fa-user-group" style={{ color: "#ffffff", }}></i><span className="ml-2 fs-5 d-none d-sm-inline">My Friends</span>
-                    </a>
-                  </li>
-                  <li className="nav-item py-2 py-sm-0">
-                    <a href="#" className="nav-link text-white" aria-current="page">
-                      <i className="fa-5 fa-solid fa-bell" style={{ color: "#ffffff", }}></i><span className="ml-2 fs-5 d-none d-sm-inline">Notification</span>
-                    </a>
-                  </li>
-                  <li className="nav-item py-2 py-sm-0">
-                    <a href="#" className="nav-link text-white" aria-current="page">
-                      <i className="fa-5 fa-solid fa-house" style={{ color: "#ffffff", }}></i><span className="ml-2 fs-5 d-none d-sm-inline">Status</span>
-                    </a>
-                  </li>
-                  <li className="nav-item py-2 py-sm-0">
-                    <a href="#" className="nav-link text-white" aria-current="page">
-                      <i className="fa-5 fa-solid fa-gear" style={{ color: "#ffffff", }}></i><span className="ml-2 fs-5 d-none d-sm-inline">Setting</span>
-                    </a>
-                  </li>
-                  <li className="nav-item py-2 py-sm-0">
-                    <a href="#" className="nav-link text-white" aria-current="page">
-                      <i className="fa-5 fa-solid fa-right-from-bracket" style={{ color: "#ffffff", }}></i><span className="ml-2 fs-5 d-none d-sm-inline">Logout</span>
-                    </a>
-                  </li>
-                </ul>
+
               </div>
               <div className='dropdown open p-3'>
                 <button className='btn border-none dropdown-toggle text-white' type='button' id='triggerId' aria-expanded="false">
@@ -95,27 +59,78 @@ export default class FoodieHome extends Component {
               </div>
             </div>
             <div>
-              <div className="card mt-3" style={{ width: 400 }}>
-                <img src="assets/posts/post1.jpg" class="card-img-top" alt="post1" height="300" />
+
+              {/* Create Add Post Part */}
+              <div className='d-block py-5 col-6 ml-5'>
+                <form >
+                  <div class="form-group" >
+                    <label for="postTitle">User ID</label>
+                    <input type="text" class="form-control w-100 " id="postTitle" placeholder="Enter post title" />
+                  </div>
+                  <div class="form-group">
+                    <label for="postImage">Post Image</label>
+                    <div class="custom-file">
+                      <input class="form-control" type="file" id="formFile" />
+                    </div>
+                  </div>
+                  <div class="form-group" >
+                    <label for="postTitle">Post Title</label>
+                    <input type="text" class="form-control w-100 " id="postTitle" placeholder="Enter post title" />
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+
+
+              {/* View Post Part */}
+              <div className="card mt-3 ml-5" style={{ width: 700 }}>
+                <img src="assets/posts/post1.jpg" class="card-img-top" alt="post1" height="500" />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
                 <div class="card-body">
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
+                  <a href="#" class="card-link"><i class="fa-solid fa-heart fs-4" style={{ color: "#e10505" }}></i></a>
+                  <a href="#" class="card-link"><i class="fa-solid fa-comment fs-4"></i></a>
+                  <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"><i class="fa-solid fa-comment fs-4"></i></button>
                 </div>
               </div>
 
-              <div className="card mt-3" style={{ width: 400 }}>
-                <img src="assets/posts/post1.jpg" class="card-img-top" alt="post1" height="300" />
+              <div className="card mt-3 ml-5" style={{ width: 700 }}>
+                <img src="assets/posts/post3.jpg" class="card-img-top" alt="post1" height="500" />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
                 <div class="card-body">
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
+                  <a href="#" class="card-link"><i class="fa-solid fa-heart fs-4" style={{ color: "#e10505" }}></i></a>
+                  <a href="#" class="card-link"><i class="fa-solid fa-comment fs-4"></i></a>
+                  <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"><i class="fa-solid fa-comment fs-4"></i></button>
+
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="mb-3">
+                              <label for="recipient-name" class="col-form-label">Recipient:</label>
+                              <input type="text" class="form-control" id="recipient-name" />
+                            </div>
+                            <div class="mb-3">
+                              <label for="message-text" class="col-form-label">Message:</label>
+                              <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Send message</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
